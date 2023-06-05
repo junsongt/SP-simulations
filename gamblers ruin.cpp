@@ -29,7 +29,7 @@ vector<int> gamblersRuin(int goal, int start, double p, int seed) {
     vector<int> X;
     X.push_back(X_i);
     int i = 1;
-    // stopping time tau = min{T0, TN}, where T0 = inf{}; TN = inf{}
+    // stopping time tau = min{T0, TN}, where T0 = inf{t > 0 : Xt = 0}; TN = inf{t > 0 : Xt = N}
     while (X_i != 0 && X_i != goal) {
         bool b = ber(gen);
         int Z_i;
@@ -70,6 +70,7 @@ int main() {
 
     for (int i = 1; i <= N; i++) {
         vector<int> X = gamblersRuin(goal, X0, p, i);
+        // stopping time: tau
         int tau = X.size() - 1;
         cout << X[tau] << endl;
         if (X[tau] == 0) {
