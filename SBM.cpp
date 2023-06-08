@@ -40,7 +40,8 @@ vector<T> seq(T from, T to, T by) {
     // return (X)
 }
 
-// Standard Brownian Motion: B0, B1, partition of time[0,1]
+// Standard Brownian Motion(Levy construction);
+// param: B0, B1, partition of time[0,1], random seed
 pair<vector<double>, vector<double>> SBM(double startpt, double endpt, int n, int seed) {
     vector<double> prev_B{startpt, endpt};
     vector<double> time;
