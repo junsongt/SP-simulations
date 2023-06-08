@@ -22,9 +22,9 @@ using std::endl;
 namespace plt = matplotlibcpp;
 
 // return a process of gambler's current fortune
-vector<int> gamblersRuin(int goal, int start, double p, int seed) {
+vector<int> gamblersRuin(int goal, int start, double prob, int seed) {
     std::minstd_rand gen(seed);
-    std::bernoulli_distribution ber(p);
+    std::bernoulli_distribution ber(prob);
     int X_i = start;
     vector<int> X;
     X.push_back(X_i);

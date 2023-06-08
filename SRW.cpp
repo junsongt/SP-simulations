@@ -1,4 +1,5 @@
 #include <time.h>
+
 #include <algorithm>
 #include <chrono>
 #include <cmath>
@@ -23,13 +24,14 @@ namespace plt = matplotlibcpp;
 int main() {
     // wall time
     auto start = chrono::high_resolution_clock::now();
-    double p = 0.5;
+
+    double prob = 0.5;
 
     std::random_device gen;
     // std::minstd_rand gen(12345);
     // std::default_random_engine gen;
 
-    std::bernoulli_distribution ber(p);
+    std::bernoulli_distribution ber(prob);
 
     int n = 100000;
     int X_i = 0;
