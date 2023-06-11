@@ -73,25 +73,25 @@ pair<vector<double>, vector<double>> SBM(double startpt, double endpt, int n, in
     return sbm;
 }
 
-int main() {
-    // wall time
-    auto start = chrono::high_resolution_clock::now();
+// int main() {
+//     // wall time
+//     auto start = chrono::high_resolution_clock::now();
 
-    // std::random_device rd;
-    // std::mt19937_64 gen(rd());
-    // std::minstd_rand gen(12345);
-    // std::default_random_engine gen;
-    std::minstd_rand gen(123);
-    std::uniform_real_distribution<> U(0, 1);
-    double endpt = U(gen);
+//     // std::random_device rd;
+//     // std::mt19937_64 gen(rd());
+//     // std::minstd_rand gen(12345);
+//     // std::default_random_engine gen;
+//     std::minstd_rand gen(123);
+//     std::uniform_real_distribution<> U(0, 1);
+//     double endpt = U(gen);
 
-    pair<vector<double>, vector<double>> B = SBM(0, endpt, 10, 321);
-    plt::plot(B.first, B.second);
-    plt::show();
+//     pair<vector<double>, vector<double>> B = SBM(0, endpt, 10, 321);
+//     plt::plot(B.first, B.second);
+//     plt::show();
 
-    auto end = chrono::high_resolution_clock::now();
-    auto timeTaken = chrono::duration_cast<chrono::milliseconds>(end - start);
-    cout << "Time taken: " << timeTaken.count() << " milliseconds" << endl;
+//     auto end = chrono::high_resolution_clock::now();
+//     auto timeTaken = chrono::duration_cast<chrono::milliseconds>(end - start);
+//     cout << "Time taken: " << timeTaken.count() << " milliseconds" << endl;
 
-    return 0;
-}
+//     return 0;
+// }
