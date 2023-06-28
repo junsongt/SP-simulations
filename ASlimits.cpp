@@ -24,6 +24,9 @@ namespace plt = matplotlibcpp;
 int main() {
     // wall time
     auto start = chrono::high_resolution_clock::now();
+
+
+    // limsup Xn / logn, Xn ~ Exp(1)
     std::minstd_rand gen(12345);
     std::exponential_distribution<> Exp(1);
 
@@ -35,7 +38,6 @@ int main() {
     double M = -1;
 
     for (int i = 1; i <= n; i++) {
-
         double Xi = Exp(gen);
         X.push_back(Xi);
         r_Xn_logn.push_back(Xi / log(i));
@@ -51,12 +53,12 @@ int main() {
 
     plt::plot(r_Xn_logn);
     plt::plot(ref, "r.--");
-    plt::title("lim_n Xn / log n");
+    plt::title("limsup Xn / log n");
     plt::show();
 
     plt::plot(r_Mn_logn);
     plt::plot(ref, "r.--");
-    plt::title("lim_n Mn / log n");
+    plt::title("limsup Mn / log n");
     plt::show();
 
     auto end = chrono::high_resolution_clock::now();
