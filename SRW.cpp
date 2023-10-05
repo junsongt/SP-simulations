@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <chrono>
 #include <cmath>
+#include <fstream>
 #include <iostream>
 #include <queue>
 #include <random>
@@ -52,8 +53,8 @@ int main() {
         time.push_back(i);
     }
 
-    plt::plot(X);
-    plt::show();
+    // plt::plot(time, X);
+    // plt::show();
 
     // 2-D case
     int Xi = 0;
@@ -76,9 +77,26 @@ int main() {
         Ys.push_back(Yi);
     }
 
-    plt::plot(Xs, Ys);
-    plt::title("2D SRW without time progress");
-    plt::show();
+    // plt::plot(Xs, Ys);
+    // plt::title("2D SRW without time progress");
+    // plt::show();
+
+    // save data into file
+    ofstream dataframe("./data files/srw.txt");
+    cout << "Start writing data file..." << endl;
+    dataframe << "time"
+              << ","
+              << "X_1D"
+              << ","
+              << "X_2D"
+              << ","
+              << "Y_2D" << endl;
+    for (int i = 1; i <= n; i++) {
+        dataframe << time[i] << "," << X[i] << "," << Xs[i] << "," << Ys[i] << endl;
+    }
+    dataframe.close();
+
+    cout << "Finish writing data file!" << endl;
 
     auto end = chrono::high_resolution_clock::now();
     auto timeTaken = chrono::duration_cast<chrono::milliseconds>(end - start);
