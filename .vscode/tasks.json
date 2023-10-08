@@ -12,15 +12,17 @@
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 				"-I",
-                "D:\\Probability\\SP simulation\\matplotlibcpp.h",
-                "-I",
-                "C:\\Program Files\\Python\\Python311\\include",
-                "-I",
-                "C:\\Program Files\\Python\\Python311\\Lib\\site-packages\\numpy\\core\\include",
-                "-L",
-                "C:\\Program Files\\Python\\Python311",
-                "-l",
-                "python311"
+				"D:\\Probability\\SP simulation\\matplotlibcpp.h",
+				"-I",
+				"C:\\Program Files\\Python\\Python311\\include",
+				"-I",
+				"C:\\Program Files\\Python\\Python311\\Lib\\site-packages\\numpy\\core\\include",
+				"-L",
+				"C:\\Program Files\\Python\\Python311",
+				"-l",
+				"python311",
+				"-I",
+				"C:\\eigen-3.4.0"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

@@ -4,8 +4,9 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\Program Files\\Python\\Python311\\include", // python include
-                "C:\\Program Files\\Python\\Python311\\Lib\\site-packages\\numpy\\core\\include" //numpy include
+                "C:\\Program Files\\Python\\Python311\\include",
+                "C:\\Program Files\\Python\\Python311\\Lib\\site-packages\\numpy\\core\\include",
+                "C:\\eigen-3.4.0\\**"
             ],
             "defines": [
                 "_DEBUG",
