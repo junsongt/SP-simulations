@@ -1,7 +1,7 @@
 # SP-simulations
 Stochastic process simulations
 
-![2D standard brownian motion](./plots/sbm%202d.jpg){:height="50%" width="50%"}
+![2D standard brownian motion](./plots/sbm%202d.jpg)
 ![2D standard brownian motion planar](./plots/sbm%202d%20planar.jpg)
 
 
