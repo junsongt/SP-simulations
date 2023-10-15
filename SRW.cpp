@@ -91,7 +91,7 @@ int main() {
               << "X_2D"
               << ","
               << "Y_2D" << endl;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 0; i < n; i++) {
         dataframe << time[i] << "," << X[i] << "," << Xs[i] << "," << Ys[i] << endl;
     }
     dataframe.close();
