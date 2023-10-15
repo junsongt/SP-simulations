@@ -49,6 +49,16 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "complex": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "condition_variable": "cpp",
+        "cstring": "cpp",
+        "unordered_set": "cpp",
+        "set": "cpp",
+        "hash_map": "cpp",
+        "future": "cpp",
+        "iomanip": "cpp",
+        "mutex": "cpp",
+        "thread": "cpp",
+        "valarray": "cpp"
     }
 }
