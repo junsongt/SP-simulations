@@ -9,10 +9,11 @@
 #include <random>
 #include <stack>
 #include <string>
+#include <tuple>
 #include <typeinfo>
 #include <vector>
 
-#include "matplotlibcpp.h"
+// #include "matplotlibcpp.h"
 #include "mvrnormal.cpp"
 
 // To save std::
@@ -20,8 +21,6 @@ using namespace std;
 // OR
 using std::cout;
 using std::endl;
-
-namespace plt = matplotlibcpp;
 
 template <typename T>
 vector<T> seq(T from, T to, T by) {
@@ -41,8 +40,6 @@ vector<T> seq(T from, T to, T by) {
     // }
     // return (X)
 }
-
-
 
 // Standard Brownian Motion(Levy construction);
 // param: B0, B1, partition of time[0,1], random seed
@@ -138,26 +135,3 @@ tuple<vector<double>, vector<double>, vector<double>> SBM_2D(pair<double, double
     tuple<vector<double>, vector<double>, vector<double>> sbm_2d(D_i, Bx, By);
     return sbm_2d;
 }
-
-// int main() {
-//     // wall time
-//     auto start = chrono::high_resolution_clock::now();
-
-//     // std::random_device rd;
-//     // std::mt19937_64 gen(rd());
-//     // std::minstd_rand gen(12345);
-//     // std::default_random_engine gen;
-//     std::minstd_rand gen(123);
-//     std::uniform_real_distribution<> U(0, 1);
-//     double endpt = U(gen);
-
-//     pair<vector<double>, vector<double>> B = SBM(0, endpt, 10, 321);
-//     plt::plot(B.first, B.second);
-//     plt::show();
-
-//     auto end = chrono::high_resolution_clock::now();
-//     auto timeTaken = chrono::duration_cast<chrono::milliseconds>(end - start);
-//     cout << "Time taken: " << timeTaken.count() << " milliseconds" << endl;
-
-//     return 0;
-// }

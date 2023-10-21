@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "SBM.cpp"
-#include "matplotlibcpp.h"
+// #include "matplotlibcpp.h"
 
 // To save std::
 using namespace std;
@@ -21,7 +21,7 @@ using namespace std;
 using std::cout;
 using std::endl;
 
-namespace plt = matplotlibcpp;
+// namespace plt = matplotlibcpp;
 
 // Browian bridge
 // Xt = a*t + (Bt - t*B1), t in [0,1]; a is the fixed endpt
@@ -75,9 +75,9 @@ int main() {
     double b1 = N(gen);
 
     pair<vector<double>, vector<double>> B = SBM(b0, b1, 15);
-    plt::plot(B.first, B.second);
-    plt::title("standard browian motion");
-    plt::show();
+    // plt::plot(B.first, B.second);
+    // plt::title("standard browian motion");
+    // plt::show();
 
     // 2D SBM
     VectorXd MU(2);
