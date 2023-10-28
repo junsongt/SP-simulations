@@ -7,12 +7,15 @@ library("rgl")
 
 data = read.table(file.choose(), header = TRUE, sep = ",")
 
+
+par(pty="s")
+
 # 1D SBM
 plot(data$time, data$X_1D, xlab = "time", ylab = "Xt", type = "l")
 
 
 # 2D SBM without time axis
-plot(data$X_2D, data$Y_2D, xlab = "Xt", ylab = "Yt")
+plot(data$X_2D, data$Y_2D, xlab = "Xt", ylab = "Yt", asp = 1)
 
 
 # 2D SBM with time progress(3D plot)
